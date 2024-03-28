@@ -1,0 +1,695 @@
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+ <div class="size-guide-popup">
+      <div class="size-overlay"></div>
+      <div class="cm-size-poup-inner">
+          <div class="guide-popup-close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 11"><g><g><g><path fill="none" stroke="#000" stroke-miterlimit="20" d="M.5.5l9 9"></path></g><g><path fill="none" stroke="#000" stroke-miterlimit="20" d="M.5 9.965L9.5.5"></path></g></g></g></svg>
+          </div>
+          <div class="size-guide-header">
+              <h2>Size Guide</h2>
+              <h4>Please use the below as a general guide based on Australian standard sizing. Please see product description for further sizing information or send us an email and we’ll be able to assist you.</h4>
+          </div>
+          <div class="size-guide-body">
+              <div class="tabbedPanels">
+                  <!-- begins the tabbed panels / wrapper-->
+
+                  <ul class="tabs">
+                      <li><a href="#panel1">Clothing</a></li>
+                      <li><a href="#panel2">footwear</a></li>
+                  </ul>
+
+                  <div class="panelContainer">
+                      <div id="panel1" class="panel">
+                          <div class="size-chart-wrapper">
+                              <div class="size-chart-left">
+                                  <div class="mesure-list checkbox-mesure">
+                                      <h5>SELECT REGION:</h5>
+                                      <ul>
+                                          <li>
+                                              <input type="radio" id="au" name="redion" />
+                                              <label for="au">au</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="UK" name="redion" />
+                                              <label for="UK">UK</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="US" name="redion" />
+                                              <label for="US">US</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <div class="mesure-list checkbox-mesure">
+                                      <h5>SELECT SIZE:</h5>
+                                      <ul>
+                                          <li>
+                                              <input type="radio" id="AU-6" name="size" />
+                                              <label for="AU-6">AU 6</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-8" name="size" />
+                                              <label for="AU-8">AU 8</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-10" name="size" />
+                                              <label for="AU-10">AU 10</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-12" name="size" />
+                                              <label for="AU-12">AU 12</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-14" name="size" />
+                                              <label for="AU-14">AU 14</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <div class="mesure-list">
+                                      <h5>SUNDAE MUSE SIZING:</h5>
+                                      <div class="check-value">
+                                          <h2>AU 8 — S</h2>
+                                      </div>
+                                  </div>
+                                  <div class="mesure-list">
+                                      <h5>SUNDAE MUSE SIZING:</h5>
+                                      <div class="check-value">
+                                          <h3>US 2 — UK 34</h3>
+                                      </div>
+                                  </div>
+                                  <div class="mesure-list checkbox-mesure">
+                                      <h5>MEASUREMENTS:</h5>
+                                      <ul>
+                                          <li>
+                                              <input type="radio" id="cm" name="mesurements" />
+                                              <label for="cm">CM</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="in" name="mesurements" />
+                                              <label for="in">IN</label>
+                                          </li>
+                                      </ul>
+                                      <div class="check-value multi-value">
+                                          <h3>Bust 31.5”</h3>
+                                          <h3>Waist 24”</h3>
+                                          <h3>Hip 34”</h3>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="size-chart-right">
+                                  <div class="how-to-mesure">
+                                      <div class="mesure-img">
+                                          <img src="images/size-guide-poster.png" alt="">
+                                      </div>
+                                      <div class="mesure-content">
+                                          <h5>HOW TO MEASURE:</h5>
+                                          <div class="bottom-content">
+                                              <div class="bt-content-inner">
+                                                  <h5>BUST</h5>
+                                                  <h5>Measured from underarm across the fullest part of the bust.</h5>
+                                              </div>
+                                              <div class="bt-content-inner">
+                                                  <h5>WAIST</h5>
+                                                  <h5>Measured across the smallest part of the waist.</h5>
+                                              </div>
+                                              <div class="bt-content-inner">
+                                                  <h5>HIP</h5>
+                                                  <h5>Measured across the widest part of the hip.</h5>
+                                              </div>
+                                              <div class="bt-content-inner">
+                                                  <h5>LENGTH</h5>
+                                                  <h5>Measured from the highest point of the shoulder to the hem.</h5>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end panel 1 -->
+
+
+                      <div id="panel2" class="panel">
+                          <div class="size-chart-wrapper">
+                              <div class="size-chart-left">
+                                  <div class="mesure-list checkbox-mesure">
+                                      <h5>SELECT REGION:</h5>
+                                      <ul>
+                                          <li>
+                                              <input type="radio" id="au" name="redion" />
+                                              <label for="au">au</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="UK" name="redion" />
+                                              <label for="UK">UK</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="US" name="redion" />
+                                              <label for="US">US</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <div class="mesure-list checkbox-mesure">
+                                      <h5>SELECT SIZE:</h5>
+                                      <ul>
+                                          <li>
+                                              <input type="radio" id="AU-6" name="size" />
+                                              <label for="AU-6">AU 6</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-8" name="size" />
+                                              <label for="AU-8">AU 8</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-10" name="size" />
+                                              <label for="AU-10">AU 10</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-12" name="size" />
+                                              <label for="AU-12">AU 12</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="AU-14" name="size" />
+                                              <label for="AU-14">AU 14</label>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <div class="mesure-list">
+                                      <h5>SUNDAE MUSE SIZING:</h5>
+                                      <div class="check-value">
+                                          <h2>AU 8 — S</h2>
+                                      </div>
+                                  </div>
+                                  <div class="mesure-list">
+                                      <h5>SUNDAE MUSE SIZING:</h5>
+                                      <div class="check-value">
+                                          <h3>US 2 — UK 34</h3>
+                                      </div>
+                                  </div>
+                                  <div class="mesure-list checkbox-mesure">
+                                      <h5>MEASUREMENTS:</h5>
+                                      <ul>
+                                          <li>
+                                              <input type="radio" id="cm" name="mesurements" />
+                                              <label for="cm">CM</label>
+                                          </li>
+                                          <li>
+                                              <input type="radio" id="in" name="mesurements" />
+                                              <label for="in">IN</label>
+                                          </li>
+                                      </ul>
+                                      <div class="check-value multi-value">
+                                          <h3>Bust 31.5”</h3>
+                                          <h3>Waist 24”</h3>
+                                          <h3>Hip 34”</h3>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="size-chart-right">
+                                  <div class="how-to-mesure">
+                                      <div class="mesure-img">
+                                          <img src="images/size-guide-poster.png" alt="">
+                                      </div>
+                                      <div class="mesure-content">
+                                          <h5>HOW TO MEASURE:</h5>
+                                          <div class="bottom-content">
+                                              <div class="bt-content-inner">
+                                                  <h5>BUST</h5>
+                                                  <h5>Measured from underarm across the fullest part of the bust.</h5>
+                                              </div>
+                                              <div class="bt-content-inner">
+                                                  <h5>WAIST</h5>
+                                                  <h5>Measured across the smallest part of the waist.</h5>
+                                              </div>
+                                              <div class="bt-content-inner">
+                                                  <h5>HIP</h5>
+                                                  <h5>Measured across the widest part of the hip.</h5>
+                                              </div>
+                                              <div class="bt-content-inner">
+                                                  <h5>LENGTH</h5>
+                                                  <h5>Measured from the highest point of the shoulder to the hem.</h5>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="wrapper">
+      <section class="product-details-section">
+          <div class="pdp-inner">
+              <div class="pdp-breadcrumb">
+                  <ul>
+                      <li>
+                          <a href="#">Exclusives</a>
+                      </li>
+                      <li>
+                          <a href="#">tops</a>
+                      </li>
+                      <li>
+                          <a href="#">floral</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="product-details-slider">
+                  <div class="pdp-slider">
+                      {% for image in product.images %}
+                        <div class="pdp-item">
+                            <a href="#">
+                                <img src="{{ image.src | img_url: '1024x' }}" alt="{{ product.title }}">
+                            </a>
+                        </div>
+                      {% endfor %}
+                  </div>
+                  <div class="pdp-details">
+                      <div class="pdp-detail-inner">
+                          <div class="pdp-name">
+                              <h2>{{ product.title }}</h2>
+                              <div class="reting-star">
+                                  <div class="star">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7"><g><g><path d="M1.295 6.404l.08-.513c.093-.586.187-1.171.282-1.757.007-.041-.016-.061-.04-.082L.048 2.515C.032 2.499.01 2.486 0 2.455l.517-.083c.582-.092 1.163-.185 1.745-.274.043-.007.052-.034.066-.062L3.3.078 3.34 0c.016.03.03.052.04.075.33.646.66 1.295.989 1.943.023.044.048.07.1.076.546.079 1.091.16 1.636.24l.56.083c.012.002.025.007.039.01-.007.03-.032.043-.05.061-.517.516-1.031 1.033-1.55 1.548a.105.105 0 0 0-.033.103c.124.723.245 1.446.367 2.17.003.022.012.045.001.074a1.08 1.08 0 0 1-.064-.032c-.644-.33-1.29-.657-1.936-.989-.055-.028-.096-.026-.15.002-.639.337-1.278.67-1.92 1.005l-.074.035z"/></g></g></svg>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7"><g><g><path d="M1.295 6.404l.08-.513c.093-.586.187-1.171.282-1.757.007-.041-.016-.061-.04-.082L.048 2.515C.032 2.499.01 2.486 0 2.455l.517-.083c.582-.092 1.163-.185 1.745-.274.043-.007.052-.034.066-.062L3.3.078 3.34 0c.016.03.03.052.04.075.33.646.66 1.295.989 1.943.023.044.048.07.1.076.546.079 1.091.16 1.636.24l.56.083c.012.002.025.007.039.01-.007.03-.032.043-.05.061-.517.516-1.031 1.033-1.55 1.548a.105.105 0 0 0-.033.103c.124.723.245 1.446.367 2.17.003.022.012.045.001.074a1.08 1.08 0 0 1-.064-.032c-.644-.33-1.29-.657-1.936-.989-.055-.028-.096-.026-.15.002-.639.337-1.278.67-1.92 1.005l-.074.035z"/></g></g></svg>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7"><g><g><path d="M1.295 6.404l.08-.513c.093-.586.187-1.171.282-1.757.007-.041-.016-.061-.04-.082L.048 2.515C.032 2.499.01 2.486 0 2.455l.517-.083c.582-.092 1.163-.185 1.745-.274.043-.007.052-.034.066-.062L3.3.078 3.34 0c.016.03.03.052.04.075.33.646.66 1.295.989 1.943.023.044.048.07.1.076.546.079 1.091.16 1.636.24l.56.083c.012.002.025.007.039.01-.007.03-.032.043-.05.061-.517.516-1.031 1.033-1.55 1.548a.105.105 0 0 0-.033.103c.124.723.245 1.446.367 2.17.003.022.012.045.001.074a1.08 1.08 0 0 1-.064-.032c-.644-.33-1.29-.657-1.936-.989-.055-.028-.096-.026-.15.002-.639.337-1.278.67-1.92 1.005l-.074.035z"/></g></g></svg>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7"><g><g><path d="M1.295 6.404l.08-.513c.093-.586.187-1.171.282-1.757.007-.041-.016-.061-.04-.082L.048 2.515C.032 2.499.01 2.486 0 2.455l.517-.083c.582-.092 1.163-.185 1.745-.274.043-.007.052-.034.066-.062L3.3.078 3.34 0c.016.03.03.052.04.075.33.646.66 1.295.989 1.943.023.044.048.07.1.076.546.079 1.091.16 1.636.24l.56.083c.012.002.025.007.039.01-.007.03-.032.043-.05.061-.517.516-1.031 1.033-1.55 1.548a.105.105 0 0 0-.033.103c.124.723.245 1.446.367 2.17.003.022.012.045.001.074a1.08 1.08 0 0 1-.064-.032c-.644-.33-1.29-.657-1.936-.989-.055-.028-.096-.026-.15.002-.639.337-1.278.67-1.92 1.005l-.074.035z"/></g></g></svg>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7"><g><g><path d="M1.295 6.404l.08-.513c.093-.586.187-1.171.282-1.757.007-.041-.016-.061-.04-.082L.048 2.515C.032 2.499.01 2.486 0 2.455l.517-.083c.582-.092 1.163-.185 1.745-.274.043-.007.052-.034.066-.062L3.3.078 3.34 0c.016.03.03.052.04.075.33.646.66 1.295.989 1.943.023.044.048.07.1.076.546.079 1.091.16 1.636.24l.56.083c.012.002.025.007.039.01-.007.03-.032.043-.05.061-.517.516-1.031 1.033-1.55 1.548a.105.105 0 0 0-.033.103c.124.723.245 1.446.367 2.17.003.022.012.045.001.074a1.08 1.08 0 0 1-.064-.032c-.644-.33-1.29-.657-1.936-.989-.055-.028-.096-.026-.15.002-.639.337-1.278.67-1.92 1.005l-.074.035z"/></g></g></svg>
+                                  </div>
+                                  <h5>
+                                      (10) reviews
+                                  </h5>
+                              </div>
+                              <div class="pdp-price">
+                                  <h4>{{ product.price | money_with_currency }}</h4>
+                              </div>
+                              <div class="pdp-description">
+                                  <p>or make 4 interest-free payments of $12.25 AUD fortnightly with afterpay. More info.</p>
+                              </div>
+                              <div class="discounts-label">
+                                  <a href="#" class="btn-bg-border">
+                                      <span>Use code <b>sale25</b> for 25% off at checkout</span>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="pdp-color-selecter variant-part">
+                              <h5>
+                                  Selected Colour:
+                                  <div class="sh4">{{ product.metafields.custom.colors }}</div>
+                              </h5>
+                          </div>
+                          <div class="pdp-size-selecter variant-part">
+                              <div class="select-title">
+                                  <h5>
+                                      SELECT SIZE:
+                                  </h5>
+                                  <a href="#" class="h5 open-size-popup">Size Guide</a>
+                              </div>
+                              {% if product.available and product.variants.size > 1 %}
+                                {% render 'swatch' with 'Size' as swatch %}
+                              {% endif %}
+                          </div>
+                          <div class="pdp-add-cart">
+                              <a href="#" class="btn-bg-border">
+                                  <span>add to bag</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                              </a>
+
+                              <a href="#" class="pdp-whislist-btn">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12"><g><g><path d="M13.605 4.437c.044.886-.24 1.646-.664 2.371-.52.896-1.214 1.643-1.966 2.342-1.14 1.057-2.393 1.952-3.712 2.769-.105.061-.184.052-.28-.009a25.682 25.682 0 0 1-3.407-2.49 11.684 11.684 0 0 1-2.245-2.572 4.334 4.334 0 0 1-.66-2.94c.105-.83.42-1.564 1.014-2.162A3.638 3.638 0 0 1 3.847.685a3.482 3.482 0 0 1 2.682.742c.196.153.362.336.537.511.057.057.083.048.131-.004.455-.511.987-.9 1.643-1.114a3.376 3.376 0 0 1 1.445-.14c.634.07 1.232.258 1.765.616.55.371.93.878 1.214 1.472.18.376.284.773.341 1.18.022.165 0 .344 0 .489z"></path></g></g></svg>
+                                  <div class="sh1">ADD TO WISHLIST</div>
+                              </a>
+                          </div>
+                          <div class="pdp-description-acc">
+                              <div class="pdp-ds-inner">
+                                  <h2>Description/Details/Returns</h2>
+                                  <div class="ds-accordion">
+                                      <p class="h5">The perfect crop top that your wardrobe will love! She’s made from a pink floral print in a gorgeous peach hue. Features elastic shoulder sleeves, frill detailing and a tie-up bust. She’s also shirred through the
+                                          body for a comfy and cute fit! Style her with mules and gold hoops for total French girl vibes!</p>
+                                      <div class="acc-drop">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7"><defs><clipPath id="9ndka"><path fill="#fff" d="M4 0l4 7H0z"/></clipPath></defs><g><g transform="rotate(-180 4 3.5)"><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width="2" d="M4 0v0l4 7v0H0v0z" clip-path="url(&quot;#9ndka&quot;)"/></g></g></svg>
+                                      </div>
+                                  </div>
+                                  <div class="dc-inner-accordiopn">
+                                      <div class="cm-acc-title">
+                                          <div class="sh1">DETAILS</div>
+                                          <div class="acc-drop">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7"><defs><clipPath id="9ndka"><path fill="#fff" d="M4 0l4 7H0z"/></clipPath></defs><g><g transform="rotate(-180 4 3.5)"><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width="2" d="M4 0v0l4 7v0H0v0z" clip-path="url(&quot;#9ndka&quot;)"/></g></g></svg>
+                                          </div>
+                                      </div>
+                                      <div class="cm-acc-desc">
+                                          <p class="h5">Peach, orange and pink floral print</p>
+                                          <p class="h5">Elastic neckline and sleeves</p>
+                                          <p class="h5">Tie-up detail in the bust</p>
+                                          <p class="h5">Shirred elastic body</p>
+                                          <p class="h5">Frill details</p>
+                                          <p class="h5">Slip on style</p>
+                                          <p class="h5">Lined through the bust</p>
+                                          <p class="h5">Fabric is Polyester</p>
+                                          <p class="h5">Tani is wearing size AU 6 / US 2</p>
+                                      </div>
+                                  </div>
+                                  <div class="dc-inner-accordiopn">
+                                      <div class="cm-acc-title">
+                                          <div class="sh1">RETURNS</div>
+                                          <div class="acc-drop">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7"><defs><clipPath id="9ndka"><path fill="#fff" d="M4 0l4 7H0z"/></clipPath></defs><g><g transform="rotate(-180 4 3.5)"><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width="2" d="M4 0v0l4 7v0H0v0z" clip-path="url(&quot;#9ndka&quot;)"/></g></g></svg>
+                                          </div>
+                                      </div>
+                                      <div class="cm-acc-desc">
+                                          <p class="h5">We hope you absolutely love your new Sundae Muse goodies but totally understand things don’t always work out when you’re shopping online. If you’re not 100% happy with your purchase, we offer returns for store
+                                              credit within 30 days of package delivery. We offer FREE returns on all Australian orders. See our returns page for more details.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="complate-look">
+          <div class="container">
+              <div class="new-arrivals-inner">
+                  <div class="new-ar-btn">
+                      <a href="#" class="arrow-btn">
+                          <span>Complete The Look</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                      </a>
+                  </div>
+                  <div class="new-ar-product product-card-main">
+                      <div class="new-ar-inner card-slider-wrapper">
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-1.png" alt="New arrivals">
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-2.png" alt="New arrivals">
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-3.png" alt="New arrivals">
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-3.png" alt="New arrivals">
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="complate-look you-might-also-like">
+          <div class="container">
+              <div class="new-arrivals-inner">
+                  <div class="new-ar-btn">
+                      <a href="#" class="arrow-btn">
+                          <span>You Might Also Like</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                      </a>
+                  </div>
+                  <div class="new-ar-product product-card-main">
+                      <div class="new-ar-inner cm-mob-card-slider">
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-3.png" alt="New arrivals">
+                                      </a>
+                                      <a href="#" class="wishlist-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-1.png" alt="New arrivals">
+                                      </a>
+                                      <a href="#" class="wishlist-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-2.png" alt="New arrivals">
+                                      </a>
+                                      <a href="#" class="wishlist-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="cm-ar-pr">
+                              <div class="product-card">
+                                  <div class="product-image">
+                                      <a href="#">
+                                          <img src="images/complete-look-3.png" alt="New arrivals">
+                                      </a>
+                                      <a href="#" class="wishlist-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                      </a>
+                                  </div>
+                                  <div class="product-content">
+                                      <div class="product-details">
+                                          <h3 class="product-name">Co-Ord Set in Lemon</h3>
+                                          <div class="sh1 price">$89.00</div>
+                                      </div>
+                                      <div class="pr-shop-btn">
+                                          <a href="#" class="add-to-wishlist">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                          </a>
+                                          <a href="#" class="pr-rout-arrow">
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="insta-section">
+          <div class="container">
+              <div class="new-arrivals-inner">
+                  <div class="new-ar-btn">
+                      <a href="#" class="arrow-btn">
+                          <span>Styled By You</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                      </a>
+                  </div>
+                  <div class="new-ar-product">
+                      <div class="insta-wrapper">
+                          <div class="insta-items">
+                              <a href="#">
+                                  <img src="images/insta-img-1.png" alt="Insta Iage">
+                                  <div class="insta-btn">
+                                      <div class="btn-bg-border">
+                                          <span>See It on insta</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                      </div>
+                                      <span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                      </span>
+                                  </div>
+                              </a>
+                          </div>
+                          <div class="insta-items">
+                              <a href="#">
+                                  <img src="images/insta-img-2.png" alt="Insta Iage">
+                                  <div class="insta-btn">
+                                      <div class="btn-bg-border">
+                                          <span>See It on insta</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                      </div>
+                                      <span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                      </span>
+                                  </div>
+                              </a>
+                          </div>
+                          <div class="insta-items">
+                              <a href="#">
+                                  <img src="images/insta-img-3.png" alt="Insta Iage">
+                                  <div class="insta-btn">
+                                      <div class="btn-bg-border">
+                                          <span>See It on insta</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                      </div>
+                                      <span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                      </span>
+                                  </div>
+                              </a>
+                          </div>
+                          <div class="insta-items">
+                              <a href="#">
+                                  <img src="images/insta-img-4.png" alt="Insta Iage">
+                                  <div class="insta-btn">
+                                      <div class="btn-bg-border">
+                                          <span>See It on insta</span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                      </div>
+                                      <span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                      </span>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="mob-shop-all-btn">
+                          <a href="#" class="btn-bg-border">
+                              <span>Shop insta looks</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+  </div>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

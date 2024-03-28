@@ -1,0 +1,68 @@
+<!doctype html>
+<!--[if IE 9]> <html class="ie9 no-js" lang="{{ shop.locale }}"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{ shop.locale }}"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  {%- if canonical_url != blank  -%}
+  <link rel="canonical" href="{{ canonical_url }}">
+  {%- endif -%}
+  {%- if settings.favicon != blank -%}
+  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+  {%- capture seo_title -%}
+  {%- if request.page_type == 'search' and search.performed == true -%}
+  {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+  {%- else -%}
+  {{ page_title }}
+  {%- endif -%}
+  {%- if current_tags -%}
+  {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+  {%- endif -%}
+  {%- if current_page != 1 -%}
+  &ndash; {{ 'general.meta.page' | t: page: current_page }}
+  {%- endif -%}
+  {%- assign escaped_page_title = page_title | escape -%}
+  {%- unless escaped_page_title contains shop.name -%}
+  &ndash; {{ shop.name }}
+  {%- endunless -%}
+  {%- endcapture -%}
+
+  <title>{{ seo_title | strip }}</title>
+  
+  {%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  {% include 'social-meta-tags' %}
+
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+  {{ 'slick.css' | asset_url | stylesheet_tag }}
+  
+  {% render 'boost-sd-fallback' %}
+    {{ content_for_header }}
+
+  {{ 'jquery.min.js' | asset_url | script_tag }}
+  {{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+
+  {%- if template contains 'customers' -%}
+  {{ 'customer.scss.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+  {%- endif -%}
+
+  <script src="{{ 'custom.js' |asset_url }}" defer="defer"></script>
+</head>
+<body class="template-{{ template | split: '.' | first }} body">
+
+  {% section 'header' %}
+  {{ content_for_layout }}
+  {% section 'footer' %}
+  
+  <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>  
+</body>
+</html>
+
+
+
+

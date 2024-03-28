@@ -1,0 +1,60 @@
+{% schema %}
+  {
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "destop",
+      "label": "Destop"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile",
+      "label": "Mobile"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Hero Section",
+      "type": "hero_section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slider",
+          "label": "Slider"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}  
+{% endschema %}
+
+<section class="hero-section">
+    <img class="main-banner" src="{{ section.settings.destop | img_url: 'master'  }}" alt="banner Image">
+    <img class="main-banner-mob" src="{{ section.settings.mobile | img_url: 'master' }}" alt="banner Image">
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-slider">
+                {% for block in section.blocks %}
+                  <div class="hero-sl-item">
+                      <a href="#">
+                          <img src="{{ block.settings.slider | img_url: 'master' }}" alt="Slider image" />
+                      </a>
+                  </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

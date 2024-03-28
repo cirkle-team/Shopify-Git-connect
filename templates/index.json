@@ -1,0 +1,92 @@
+{
+  "sections": {
+    "25ad8f6c-9c40-4eac-8218-f04da3388b41": {
+      "type": "hero-section-fullwidth",
+      "blocks": {
+        "e6cc771d-3b6b-43ce-a473-879d6b415a4e": {
+          "type": "slide",
+          "settings": {
+            "background_image_desktop": "shopify:\/\/shop_images\/stylish-summer-necklace.jpg",
+            "background_image_mobile": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+            "heading": "Endless Summer",
+            "description": "Our latest collection is feminine, with a romantic undertone. Celebrating flowers in bloom, the Endless Summer collection brings together an array of vintage inspired florals and muted tones.",
+            "button_text": "SHOP NEW ARRIVALS",
+            "button_link": "#"
+          }
+        },
+        "a5105259-3df4-43d8-a708-2ab981654055": {
+          "type": "slide",
+          "settings": {
+            "background_image_desktop": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "background_image_mobile": "shopify:\/\/shop_images\/Sundae_Muse_-4456.jpg",
+            "heading": "SHOP NEW ARRIVALS",
+            "description": "Our latest collection is feminine, with a romantic undertone. Celebrating flowers in bloom, the Endless Summer collection brings together an array of vintage inspired florals and muted tones.",
+            "button_text": "Endless Summer",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "e6cc771d-3b6b-43ce-a473-879d6b415a4e",
+        "a5105259-3df4-43d8-a708-2ab981654055"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "2203be34-428e-42fd-a5cb-8cc6951e0a9a": {
+      "type": "hero-section-bg",
+      "blocks": {
+        "85bdd7d3-b48c-477c-9987-a50656badd14": {
+          "type": "hero_section",
+          "settings": {
+            "slider": "shopify:\/\/shop_images\/Sundae_Muse_-4091.jpg"
+          }
+        },
+        "07faefa2-e06d-4072-ac68-054178cd88a7": {
+          "type": "hero_section",
+          "settings": {
+            "slider": "shopify:\/\/shop_images\/Sundae_Muse_-4093.jpg"
+          }
+        },
+        "1915ca9c-0b13-44a5-86aa-ad511e694d78": {
+          "type": "hero_section",
+          "settings": {
+            "slider": "shopify:\/\/shop_images\/Sundae_Muse_-4092.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "85bdd7d3-b48c-477c-9987-a50656badd14",
+        "07faefa2-e06d-4072-ac68-054178cd88a7",
+        "1915ca9c-0b13-44a5-86aa-ad511e694d78"
+      ],
+      "settings": {
+        "destop": "shopify:\/\/shop_images\/core-strength-fitness.jpg",
+        "mobile": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg"
+      }
+    },
+    "e9a2a5d9-ff3d-46af-b848-7685713b2adc": {
+      "type": "New-Arrivals",
+      "settings": {
+      }
+    },
+    "83443b41-b4d5-44e7-80a2-1f7ecb68e343": {
+      "type": "Trending-Right-Now",
+      "settings": {
+      }
+    },
+    "844169b0-bec6-4177-8e92-5e760f3d2288": {
+      "type": "Reward-section",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "25ad8f6c-9c40-4eac-8218-f04da3388b41",
+    "2203be34-428e-42fd-a5cb-8cc6951e0a9a",
+    "e9a2a5d9-ff3d-46af-b848-7685713b2adc",
+    "83443b41-b4d5-44e7-80a2-1f7ecb68e343",
+    "844169b0-bec6-4177-8e92-5e760f3d2288"
+  ]
+}

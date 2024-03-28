@@ -1,0 +1,48 @@
+{% schema %}
+  {
+    "name": "Trending Right Now",
+    "settings": [],
+    "presets": [
+    {
+      "name": "trending-now"
+    }
+  ]
+  }
+{% endschema %}
+{% assign collection_handle = 'trending-right-now' %}
+
+<section class="trending-now ">
+    <div class="container">
+        <div class="trending-inner">
+            <div class="trending-title">
+                <h2>Trending Right Now</h2>
+            </div>
+        </div>
+    </div>
+    <div class="trending-slider">
+      
+        {% for product in collections[collection_handle].products limit: 8 %}
+          <div class="tr-slide-item">
+              <div class="slider-product-card">
+                  <div class="sl-product-image">
+                      <a href="#">
+                          <img src="{{ product.featured_image.src | img_url: '1024x' }}" alt="Trending">
+                      </a>
+                  </div>
+                  <div class="sl-product-details">
+                      <h3>{{ product.title }}</h3>
+                      <div class="sh1 price">{{ product.price | money_with_currency }}</div>
+                  </div>
+              </div>
+          </div>
+        {% endfor %}
+        
+    </div>
+</section>
+
+        
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

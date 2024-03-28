@@ -1,0 +1,82 @@
+{% schema %}
+  {
+  "name": "Full Width Hero section",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image_desktop",
+          "label": "Background Image Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "background_image_mobile",
+          "label": "Background Image Mobile"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "text",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full Width Hero section"
+    }
+  ]
+}  
+{% endschema %}
+
+
+ <!-- HERO SECTION START -->
+        <section class="hero-section">
+            <div class="hero-back-slider">
+                {% for block in section.blocks %}
+                  <div class="hero-back-slider-item">
+                      <img class="main-banner" src="{{ block.settings.background_image_desktop | img_url: 'master' }}" alt="banner Image">
+                      <img class="main-banner-mob" src="{{ block.settings.background_image_mobile | img_url: 'master' }}" alt="banner Image">
+                      <div class="container text-container">
+                          <div class="hero-text color-white align-left">
+                              <h1>{{ block.settings.heading}}</h1>
+                              <p>{{ block.settings.description}}</p>
+                              <a href="{{ block.settings.button_link}}" class="btn-line-blank">
+                                  <span>{{ block.settings.button_text}}</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                 {% endfor %}
+            
+            </div>
+        </section>
+        <!-- HERO SECTION END -->
+
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

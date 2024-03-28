@@ -1,0 +1,402 @@
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+<div class="wrapper">
+
+        <section class="page-banner">
+            <div class="banner-img">
+                <img class="desk" src="{{ settings.collections_banner | img_url: 'master' }}" alt="collection Banner">
+                <img class="mob" src="images/page-mob-image.png" alt="collection Banner">
+                <div class="page-banner-label">
+                    <div class="sh1">on Sale</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-page">
+            <div class="container">
+                <div class="collection-wrapper">
+                    <div class="col-filter">
+                        <div class="filter-wrapper">
+                            <div class="sh3 filter-lable">Filter/sort <span></span></div>
+                            <div class="filter-inner">
+                                <div class="filter-var">
+                                    <div class="sh3 filter-var-lable">Style <span></span></div>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="Accessories" name="radio-group">
+                                            <label for="Accessories">Accessories</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="dresses" name="radio-group">
+                                            <label for="dresses">dresses</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Tops" name="radio-group">
+                                            <label for="Tops">Tops</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="bottoms" name="radio-group">
+                                            <label for="bottoms">bottoms</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="setcorder" name="radio-group">
+                                            <label for="setcorder">Sets & co-ords</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Playsuits" name="radio-group">
+                                            <label for="Playsuits">Playsuits</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-var">
+                                    <div class="sh3 filter-var-lable">Colour <span></span></div>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="Black" name="radio-group">
+                                            <label for="Black">Black</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="white" name="radio-group">
+                                            <label for="white">white</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Yellow" name="radio-group">
+                                            <label for="Yellow">Yellow</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="Pink" name="radio-group">
+                                            <label for="Pink">Pink</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-var">
+                                    <div class="sh3 filter-var-lable">Size <span></span></div>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="XS" name="radio-group">
+                                            <label for="XS">XS</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="s" name="radio-group">
+                                            <label for="s">s</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="m" name="radio-group">
+                                            <label for="m">m</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="l" name="radio-group">
+                                            <label for="l">l</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="sort-by">
+                                    <div class="sh3">Sort by</div>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="Featured" name="radio-group">
+                                            <label for="Featured">Featured</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="bestsaller" name="radio-group">
+                                            <label for="bestsaller">Best Sellers</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="pricelowhight" name="radio-group">
+                                            <label for="pricelowhight">Price, Low to High</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="pricehightlow" name="radio-group">
+                                            <label for="pricehightlow">Price, High to Low</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="newesttoold" name="radio-group">
+                                            <label for="newesttoold">Newest to Oldest</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-collections">
+                        <div class="col-collection-inner">
+                          {%- paginate collection.products by 21 -%}
+                            {%- for product in collection.products -%}
+                              
+                            <div class="product-card col-product">
+                                <div class="product-image">
+                                    <div class="product-slider-image">
+                                        {% for image in product.images %}
+                                          <div class="col_pd_img">
+                                            <a href="#">
+                                                <img src="{{ image.src | img_url: '1024x' }}" alt="{{ product.title }}">
+                                            </a>
+                                          </div>
+                                        {% endfor %}
+                                       
+                                    </div>
+                                    <div class="product-slide-var">
+                                        <ul>
+                                            {% for variant in product.variants %}
+                                              {% if variant.inventory_quantity == 0 %}
+                                                <li>
+                                                 <a title="{{ variant.title }}" data-id="{{ variant.id }}" href="#" class="swatch-variant soldout-bx">{{ variant.title }}</a>
+                                                </li>  
+                                               {% else %}
+                                                <li>
+                                                 <a title="{{ variant.title }}" data-id="{{ variant.id }}" href="#" class="swatch-variant">{{ variant.title }}</a>
+                                                </li>
+                                              {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-details">
+                                        <h3 class="product-name">{{ product.title }}</h3>
+                                        <div class="price promo-price">
+                                            <div class="sh1 desk">
+                                                {{ product.price | money_with_currency }} — <span>USE</span> <b>SALE25</b> <span>FOR 25% OFF</span>
+                                            </div>
+                                            <div class="mob">
+                                                <div class="sh1">
+                                                    {{ product.price | money_with_currency }}
+                                                </div>
+                                                <div class="sh1">
+                                                    <span>USE</span> <b>SALE25</b> <span>FOR 25% OFF</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pr-shop-btn">
+                                        <a href="#" class="add-to-wishlist">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"><g><g><path d="M18.571 6.111c.062 1.248-.338 2.317-.934 3.337-.731 1.26-1.708 2.31-2.765 3.294-1.604 1.487-3.368 2.747-5.224 3.896-.147.086-.258.074-.393-.012a36.128 36.128 0 0 1-4.793-3.503c-1.223-1.057-2.293-2.255-3.159-3.62a6.097 6.097 0 0 1-.928-4.135c.148-1.168.59-2.2 1.426-3.042A5.118 5.118 0 0 1 4.843.832c1.395-.178 2.66.172 3.773 1.045.276.215.51.473.756.719.08.08.116.068.184-.006.64-.72 1.389-1.266 2.31-1.567a4.75 4.75 0 0 1 2.035-.197c.89.099 1.733.363 2.482.867.775.522 1.31 1.235 1.709 2.07.252.53.4 1.088.48 1.66.03.233 0 .485 0 .688z"></path></g></g></svg>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="product-add-mob">
+                                    <a href="{{ product.link }}" class="btn-bg-border cm-add-bag">
+                                        <span>Add to bag +</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                          {%- endfor -%}  
+                             {{ paginate | default_pagination: next: 'Older', previous: 'Newer' }}
+                          {%- endpaginate -%}
+
+                        </div>
+
+                    </div>
+                    <div class="mob-size-selecter">
+                        <div class="popup-bg"></div>
+                        <div class="size-select-popup">
+                            <div class="close-size-popup">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 11"><g><g><g><path fill="none" stroke="#000" stroke-miterlimit="20" d="M.5.5l9 9"></path></g><g><path fill="none" stroke="#000" stroke-miterlimit="20" d="M.5 9.965L9.5.5"></path></g></g></g></svg>
+                            </div>
+                            <div class="select-size-inner">
+                                <div class="sh3">Select a size</div>
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="psize1" name="radio-group">
+                                        <label for="psize1">6</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="psize2" name="radio-group">
+                                        <label for="psize2">8</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="psize3" name="radio-group">
+                                        <label for="psize3">10</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="psize4" name="radio-group">
+                                        <label for="psize4">12</label>
+                                    </li>
+                                </ul>
+                                <div class="select-size-add-btn">
+                                    <a href="#" class="btn-bg-border">
+                                        <span>add to bag</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="collection-pagination">
+                    <button class="page-btn prev-btn disable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="#">01</a>
+                        </li>
+                        <li>
+                            <a href="#">02</a>
+                        </li>
+                        <li>
+                            <a href="#">03</a>
+                        </li>
+                        <li>
+                            <a href="#">...</a>
+                        </li>
+                        <li>
+                            <a href="#">10</a>
+                        </li>
+                    </ul>
+                    <button class="page-btn next-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                    </button>
+                </div> -->
+            </div>
+        </section>
+        <section class="insta-section">
+            <div class="container">
+                <div class="new-arrivals-inner">
+                    <div class="new-ar-btn">
+                        <a href="#" class="arrow-btn">
+                            <span>Shop Insta</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                        </a>
+                    </div>
+                    <div class="new-ar-product">
+                        <div class="insta-wrapper">
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-1.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-2.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-3.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-4.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-5.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-6.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-7.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="insta-items">
+                                <a href="#">
+                                    <img src="images/insta-img-8.png" alt="Insta Iage">
+                                    <div class="insta-btn">
+                                        <div class="btn-bg-border">
+                                            <span>Shop the look</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13"><g><g><g><g><path d="M11.976 9.248a2.265 2.265 0 0 1-2.263 2.263H4.131A2.265 2.265 0 0 1 1.87 9.248V3.667A2.265 2.265 0 0 1 4.13 1.404h5.582a2.265 2.265 0 0 1 2.263 2.263zM4.131.348A3.324 3.324 0 0 0 .812 3.667v5.581c0 1.83 1.49 3.32 3.32 3.32h5.581c1.83 0 3.32-1.49 3.32-3.32V3.667c0-1.83-1.49-3.32-3.32-3.32z"></path></g></g><g><g><path d="M6.923 8.373A1.916 1.916 0 0 1 5.01 6.459c0-1.057.858-1.915 1.914-1.915a1.916 1.916 0 0 1 0 3.829zm0-4.885a2.974 2.974 0 0 0-2.97 2.97 2.974 2.974 0 0 0 2.97 2.971 2.974 2.974 0 0 0 2.971-2.97 2.974 2.974 0 0 0-2.97-2.97z"></path></g></g><g><g><path d="M9.313 3.318a.75.75 0 1 1 1.498 0 .75.75 0 0 1-1.498 0z"></path></g></g></g></g></svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mob-shop-all-btn">
+                            <a href="#" class="btn-bg-border">
+                                <span>Shop insta looks</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g><g><path d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1l-.558.444c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path><path fill="none" stroke="#000" stroke-miterlimit="20" stroke-width=".3" d="M.593 7.724h16.78l.026.071c-.279.27-.558.542-.84.808-1.552 1.488-3.108 2.97-4.66 4.454l-.048.043v0l.588.494a1689.81 1689.81 0 0 0 3.927-3.747c.728-.694 1.456-1.385 2.18-2.083.326-.314.326-.479-.005-.797C16.532 5.045 14.27 2.922 12.261 1v0l-.558.444v0c1.765 1.687 3.779 3.66 5.544 5.348.056.055.135.102.17.223H.593"></path></g></g></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
